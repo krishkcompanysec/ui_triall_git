@@ -10,7 +10,7 @@ import {HashRouter,BrowserRouter} from "react-router-dom";
 
 import App from './App';
 import Test from './Pages/test';
-
+import Trial from './Pages/trial';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +19,14 @@ ReactDOM.render(
     <BrowserRouter>
     <Route exact path="/" component={App} />
     <Route path="/test" component={Test} />
+    
+     <Route path="/trial" render={() =>
+            <React.Fragment>
+            <Test/>
+            <Trial/> 
+                      
+            </React.Fragment>}/>
+    
     </BrowserRouter>
     
     
